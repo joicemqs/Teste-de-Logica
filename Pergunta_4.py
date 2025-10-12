@@ -1,14 +1,13 @@
 array = [9,2,3,1,4]
 
 def completaIntervalo(arr):
-    maior = max(arr)
-    n = len(arr)
-    for i in range(maior):
-        if i in arr:
-            continue
+    maior = max(arr) # recebe o maior valor dentro do array
+    for i in range(maior): # laço de repetição de 0 até o maior número
+        if i in arr: # confere se o número já esxiste na array
+            continue #continua para a próxima repetiçao do for
         else:
-            array.append(i)
+            array.append(i) # adiciona número faltante
     print(array)
-    
+
 
 completaIntervalo(array)
