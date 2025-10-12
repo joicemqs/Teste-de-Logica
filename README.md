@@ -74,7 +74,7 @@ Sendo o resultado todos os números 1 no início do array:
 
 A ideia inicial foi percorrer o array subtraindo de x o primeiro valor do array por exemplo  e conferir  se o valor restante existe dentro do próprio array, caso exista quer dizer que o valor de x corresponde a uma soma existente entre os números. 
 
-![Alt ou título da imagem](/imagens/P2-1.png)
+![Alt ou título da imagem](/imagens/P3-1.png)
 
 Ao desenvolver a função ela apresentava resultados concretos porém com alguns desvios, por exemplo ao atribuir o valor 10 a x o retorno seria `True`, o que não deveria acontecer pois nenhuma soma feita com os números da array resultam em 10. 
 
@@ -84,9 +84,25 @@ Para resolver foi necessário fazer com que o laço de repetição que procura a
 
 Então foi adicionada a condição que compara os valores de i e j , caso eles sejam iguais o laço que procura a diferença é pulado, e primeiro laço continua para o próximo valor: 
 
-![Alt ou título da imagem](/imagens/P2-2.png)
+![Alt ou título da imagem](/imagens/P3-2.png)
 
 Resultando em `False` quando valores como 30 (dobro de 15) e 10 (dobro de 5) são inseridos como parâmetro.
+
+### Desenvolvimento da Pergunta 4
+
+Primeiro foi desenvolvida uma função que apenas adiciona os números faltantes do array a partir do maior valor dentro dele: 
+
+![Alt ou título da imagem](/imagens/P4-1.png)
+
+Agora que os números que faltavam já estavam no array bastava ordená-lo. Para isso foi utilizazdo o mesmo algoritmo de ordenação implementado na primeira pergunta dentro da mesma função: 
+
+![Alt ou título da imagem](/imagens/P4-2.png)
+
+Resultando na adição dos números faltantes de 0 até o maior número do array em ordem crescente:
+
+![Alt ou título da imagem](/imagens/P4-3.png)
+
+
 
 
 
