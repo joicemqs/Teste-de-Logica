@@ -11,4 +11,10 @@ def existeSoma (x,arr):
                 return True
     return False # retorna false se a diferença entre x e qualquer valor da diferença não for encontrada
 
-print(existeSoma(30, array))
+print("----------------------------------------------------")
+x = int (input("Digite a soma que deseja encontrar no array: "))
+if existeSoma(x,array):
+    print("\nA soma existe no array!")
+else:
+    print("\nA soma não existe no array!")
+print("----------------------------------------------------")
