@@ -40,7 +40,11 @@ Para controle do versionamento foi utilizada a ferrmaenta Git que pode ser baixa
 
 ## Desenvolvimento
 
+Ao longo do desenvolvimento a ferramenta git foi utilizada para atualizar o codigo e manter o controle do versionamento, após a impelmentação da primeira pergunta foram realizados o primeiro commit e a criação do repositório no GitHub. 
 
+A partir desse ponto os commits aconteceram de acordo com a constrtução solida de etapas da programação.
+
+As alterações foram feitas diretamente a branch main e depois do desenvolvimento de todas as perguntas do teste foi realizado o push para o repositorio remoto e o merge.
 
 ### Desenvolvimento da Pergunta 1
 
