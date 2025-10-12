@@ -7,7 +7,17 @@ def completaIntervalo(arr):
             continue #continua para a próxima repetiçao do for
         else:
             array.append(i) # adiciona número faltante
-    print(array)
-
+        print(array)
+    n = len(arr)
+    for i in range(1,n): 
+        aux = arr[i]  
+        j = i-1 
+        while j >= 0 and aux < arr[j]: 
+            arr[j+1] = arr[j] 
+            j -= 1 
+        arr[j+1] = aux
+    print("-------------------------------")    
+    print(arr)
+     
 
 completaIntervalo(array)
