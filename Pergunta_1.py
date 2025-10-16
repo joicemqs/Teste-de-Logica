@@ -14,4 +14,5 @@ def umNaFrente(arr):
 
 array = [2,1,5,2,5,2,1,1,1,7,9,13,127,21]
 umNaFrente(array)
+print("------------------------------------------------")
 print(array)
