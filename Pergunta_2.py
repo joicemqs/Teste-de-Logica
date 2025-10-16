@@ -4,7 +4,7 @@ class No:
         self.esquerda = None
         self.direita = None
 
-# Criando os nós
+# Montando a árvore
 maca = No("Maçã")
 morango = No("Morango")
 pera = No("Pera")
@@ -15,7 +15,6 @@ laranja = No("Laranja")
 banana = No("Banana")
 cebola = No("Cebola")
 
-# Montando a árvore
 maca.esquerda = morango
 maca.direita = pera
 
@@ -27,3 +26,12 @@ pera.direita = laranja
 
 laranja.esquerda = banana
 laranja.direita = cebola
+
+def caminhoBusca(no, palavra, caminho=""):
+    if no is None:
+        return None
+    if no.valor == palavra:
+        return caminho + no.valor
+
+
+print(caminhoBusca(maca, "Maçã"))
