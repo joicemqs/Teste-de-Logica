@@ -40,5 +40,12 @@ def caminhoBusca(no, palavra, caminho=""):
         return esquerda #Retorna o caminho da esquerda se ele não possuir valor None
     if direita:
         return direita #Retorna o caminho da direita se ele não possuir valor None
-    
-print(caminhoBusca(maca, "Limão"))
+
+print("\n-----------------------------------------------------")
+palavra = (input("Digite a palavra-chave para busca na árvore: "))
+
+if caminhoBusca(maca, palavra):
+    print(caminhoBusca(maca, palavra))
+else:
+    print("\nNenhum item correspondente foi encontrado na árvore!")
+print("-----------------------------------------------------\n")
