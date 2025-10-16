@@ -1,9 +1,10 @@
-class No:
+class No: #Classe No
     def __init__(self, valor):
         self.valor = valor
         self.esquerda = None
         self.direita = None
 
+#Criação dos Nós
 maca = No("Maçã")
 morango = No("Morango")
 pera = No("Pera")
@@ -14,28 +15,30 @@ laranja = No("Laranja")
 banana = No("Banana")
 cebola = No("Cebola")
 
+#Posicionamento
 maca.esquerda = morango
 maca.direita = pera
 
 morango.esquerda = goiaba
 morango.direita = limao
 
-pera.esquerda = abacaxi
-pera.direita = laranja
+pera.direita = abacaxi
+
+abacaxi.direita = laranja
 
 laranja.esquerda = banana
 laranja.direita = cebola
 
 def caminhoBusca(no, palavra, caminho=""):
-    if no is None:
+    if no is None: #Retorna ao chegar na folha da árvore
         return None
     if no.valor == palavra:
-        return caminho + no.valor
-    esquerda = caminhoBusca(no.esquerda, palavra)
-    direita = caminhoBusca(no.direita, palavra)
-    if esquerda:
-        return esquerda
+        return caminho + no.valor #Retorna o caminho e o valor do proprio nó ao cehgar na palavra-chave
+    esquerda = caminhoBusca(no.esquerda, palavra, caminho + no.valor + "--> ") #recebe o caminho se o galho possuir a palavra-chave
+    direita = caminhoBusca(no.direita, palavra, caminho + no.valor + "--> ")#recebe o caminho se o galho possuir a palavra-chave
+    if esquerda: 
+        return esquerda #Retorna o caminho da esquerda se ele não possuir valor None
     if direita:
-        return direita
+        return direita #Retorna o caminho da direita se ele não possuir valor None
     
-print(caminhoBusca(maca, "Pera"))
+print(caminhoBusca(maca, "Limão"))
